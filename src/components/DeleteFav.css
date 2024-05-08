@@ -1,0 +1,8 @@
+.ri-close-circle-fill {
+	font-size: 30px;
+	color: rgb(255, 126, 126);
+	transition: opacity 0.5s ease;
+}
+.ri-close-circle-fill:hover {
+	cursor: pointer;
+}

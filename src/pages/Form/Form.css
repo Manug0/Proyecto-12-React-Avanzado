@@ -1,0 +1,50 @@
+.request-info {
+	justify-content: center;
+	margin: 0 auto;
+	width: 60%;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+form input {
+	margin: 0 auto;
+	width: 30%;
+	height: 2rem;
+	border-radius: 10px;
+	padding: 6px;
+	transition: all 0.5s ease;
+	background-color: hsl(0, 0%, 88%);
+	color: black;
+	font-weight: 700;
+}
+
+form input.dark-theme {
+	background-color: hsl(0, 0%, 68%);
+}
+
+form button {
+	margin: 0 auto;
+	width: 20%;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: hsl(0, 0%, 31%);
+	transition: background-color 0.3s ease;
+}
+form button:hover {
+	cursor: pointer;
+	background-color: rgb(135, 180, 197);
+}
+
+form button.dark-theme {
+	background-color: hsl(0, 0%, 79%);
+}
+form button.dark-theme:hover {
+	cursor: pointer;
+	background-color: rgb(135, 180, 197);
+}
+
+#message {
+	height: 80px;
+}

@@ -1,0 +1,61 @@
+header {
+	position: fixed;
+	display: flex;
+	z-index: 2;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: hsl(0, 0%, 93%);
+	box-shadow: 0 4px 8px 0 rgba(136, 136, 136, 0.1), 0 4px 20px 0 rgba(141, 141, 141, 0.19);
+}
+header.dark-theme {
+	background-color: #242424;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.logo {
+	position: absolute;
+	left: 50px;
+	height: 4.5rem;
+}
+
+.header-content {
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+
+nav {
+	display: flex;
+	gap: 120px;
+	justify-content: center;
+	padding: 30px;
+	font-size: 24px;
+}
+
+.navlink {
+	color: rgb(36, 167, 167);
+	transition: color 0.5s ease;
+}
+
+.navlink.dark-theme {
+	color: rgb(122, 209, 209);
+	transition: color 0.5s ease;
+}
+
+.navlink:hover {
+	color: rgb(20, 104, 104);
+}
+.navlink.dark-theme:hover {
+	color: rgb(162, 255, 255);
+}
+
+.ri-sun-line,
+.ri-moon-line {
+	position: absolute;
+	right: 30px;
+	cursor: pointer;
+}
+
+.ri-moon-line {
+	color: azure;
+}

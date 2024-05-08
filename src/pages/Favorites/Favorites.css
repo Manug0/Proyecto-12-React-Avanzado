@@ -1,0 +1,32 @@
+.favoritesPage {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 96px;
+}
+
+.favoritesPage h2 {
+	margin-bottom: 30px;
+}
+
+.favorites {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 60px;
+	height: 100%;
+}
+.favorites > div > div:nth-child(2) {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.favorites img {
+	max-width: 300px;
+	border-radius: 8px;
+	transition: transform 0.5s ease;
+}
+
+.favorites img:hover {
+	transform: scale(1.05);
+}
