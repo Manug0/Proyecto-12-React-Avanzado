@@ -1,13 +1,13 @@
 import React from "react";
-import "./Cats.css";
-import PcsCards from "./PcsCards";
+import "./PCs.css";
+import PCsCards from "./PCsCards";
+import PCsFilter from "./PCsFilter";
 
 // usememo?
 
-const Pcs = () => {
+const PCs = () => {
 	return (
 		<div className="pcsPage">
-			{/* Aqui el aside con filtros de busqueda */}
 			<div className="info">
 				<h3>Encuentra aquí nuestros portátiles de las mejores marcas</h3>
 				<h3>
@@ -15,12 +15,15 @@ const Pcs = () => {
 					precio competitivo
 				</h3>
 			</div>
-			<PcsCards />
+			<div className="filter-cards-section">
+				<PCsFilter />
+				<PCsCards />
+			</div>
 		</div>
 	);
 };
 
-export default Pcs;
+export default PCs;
 
 // const CatImg = () => {
 // 	const [cat, setCat] = useState([]);

@@ -1,0 +1,34 @@
+.slider {
+	width: 100%;
+	height: 25px;
+	background: #ddd;
+	border-radius: 5px;
+	position: relative;
+	margin: 20px 0;
+}
+
+.slider .track {
+	position: absolute;
+	height: 10px;
+	background: #ff5252;
+	border-radius: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.slider .thumb {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	z-index: 2;
+}
+
+.slider .thumb:focus {
+	outline: none;
+}

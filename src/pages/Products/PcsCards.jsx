@@ -1,10 +1,9 @@
 import React from "react";
-import "./PcsCards.css";
-import Heart from "../../components/Heart";
+import "./PCsCards.css";
 import Stars from "../../components/Stars";
 import Cart from "../../components/Cart";
 
-const PcsCards = () => {
+const PCsCards = () => {
 	const computers = [
 		{ name: "Acer Aspire 3", price: 429, reviews: 16 },
 		{ name: "Acer Nitro V 15", price: 849, reviews: 93 },
@@ -22,10 +21,8 @@ const PcsCards = () => {
 			{computers.map((computer, index) => (
 				<div className="PcCard">
 					<img key={index} src={`/src/assets/${computer.name}.webp`} alt={computer.name} />
-					<div className="heart-container">
+					<div className="cart-container">
 						<Cart computer={computer} />
-
-						{/* <Heart  /> */}
 					</div>
 					<div className="name-and-price">
 						<p>{computer.name}</p>
@@ -46,4 +43,4 @@ const PcsCards = () => {
 	);
 };
 
-export default PcsCards;
+export default PCsCards;

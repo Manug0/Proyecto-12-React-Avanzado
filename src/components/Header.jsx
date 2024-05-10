@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
-	const [darkTheme, setDarkTheme] = useState();
+	const [darkTheme, setDarkTheme] = useState(false);
 
 	const handleTheme = () => {
 		setDarkTheme(!darkTheme);
 		const elements = document.querySelectorAll(
-			"body, header, .request-info, h2, h3, h4, p, i, a, label, input, form button, .PcCard, .heart-container, .info"
+			"body, header, .request-info, h2, h3, h4, h5, p, i, a, label, input, form button, .PcCard, .info, footer"
 		);
 		elements.forEach((element) => {
 			if (darkTheme) {
@@ -38,15 +38,9 @@ const Header = () => {
 					<NavLink className="navlink" activeClassName="active" to="/pcs">
 						Portátiles
 					</NavLink>
-
-					{/* Esto ira en el footer  */}
-					<NavLink className="navlink" activeClassName="active" to="/infoForm">
-						Request Info
-					</NavLink>
 					<NavLink className="navlink" activeClassName="active" to="/favorites">
 						<i class="ri-shopping-cart-line"></i>
 					</NavLink>
-
 					<i
 						onClick={handleTheme}
 						class={document.body.classList.contains("dark-theme") ? "ri-moon-line" : "ri-sun-line"}
