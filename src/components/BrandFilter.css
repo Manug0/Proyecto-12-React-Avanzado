@@ -1,0 +1,22 @@
+.brand-checkbox {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 20px;
+}
+
+.brand-checkbox > div {
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+}
+
+.brand-checkbox input {
+	width: 20px;
+	border-radius: 50px;
+	background-color: rgb(99, 99, 99);
+}
+
+.brand-checkbox input.dark-theme {
+	background-color: hsl(0, 0%, 86%);
+}

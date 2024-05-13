@@ -4,9 +4,9 @@ import "./Home.css";
 const Home = () => {
 	return (
 		<div className="home-container">
-			<h2>Bienvenido a mi galería de imágenes de gatos!</h2>
+			<h2>MyPC</h2>
 			<br />
-			<h3>Explora las imágenes, puntúalas y guardalas en favoritos</h3>
+			<h3>La tienda líder en portátiles de España</h3>
 		</div>
 	);
 };

@@ -26,10 +26,11 @@
 	justify-content: center;
 	gap: 60px;
 	height: 100%;
-	margin: 150px 0 100px;
 	z-index: 10;
 }
 
 .filter-cards-section {
 	display: flex;
+	width: 90%;
+	margin: 100px auto;
 }

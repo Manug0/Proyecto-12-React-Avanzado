@@ -32,7 +32,6 @@ const PCsCards = () => {
 						<p className="free-ship">Envío gratis</p>
 						<p>Recíbelo mañana</p>
 					</div>
-
 					<div className="reviews">
 						<Stars id={index} />
 						<p>({computer.reviews})</p>
