@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Favorites.css";
 import { useFavorites } from "./FavoritesProvider";
-import DeleteFav from "../../components/DeleteFav";
+import DeleteFav from "../../components/DeleteCart/DeleteFav";
 
 const Favorites = () => {
 	const { favorites, removeFavorite } = useFavorites();
@@ -28,7 +28,7 @@ const Favorites = () => {
 					<div
 						onMouseEnter={() => showButtons(computer)}
 						onMouseLeave={() => showButtons(computer)}>
-						<div className="computer-image-container">
+						<div className="favorite-product">
 							<img src={`/src/assets/${computer.name}.webp`} alt="computer"></img>
 							<p>{computer.name}</p>
 							<p>{computer.price}€</p>

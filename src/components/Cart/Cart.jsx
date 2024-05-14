@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Cart.css";
-import { useFavorites } from "../pages/Favorites/FavoritesProvider";
+import { useFavorites } from "../../pages/Favorites/FavoritesProvider";
 
 const Cart = ({ computer }) => {
 	const { addFavorite } = useFavorites();

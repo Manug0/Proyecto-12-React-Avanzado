@@ -2,6 +2,8 @@ import React from "react";
 import "./PCs.css";
 import PCsCards from "./PCsCards";
 import PCsFilter from "./PCsFilter";
+import { BrandProvider } from "../../components/BrandFilter/BrandContext";
+import { PriceProvider } from "../../components/PriceFilter/PriceContext";
 
 // usememo?
 
@@ -16,60 +18,15 @@ const PCs = () => {
 				</h3>
 			</div>
 			<div className="filter-cards-section">
-				<PCsFilter />
-				<PCsCards />
+				<BrandProvider>
+					<PriceProvider>
+						<PCsFilter />
+						<PCsCards />
+					</PriceProvider>
+				</BrandProvider>
 			</div>
 		</div>
 	);
 };
 
 export default PCs;
-
-// const CatImg = () => {
-// 	const [cat, setCat] = useState([]);
-// 	const divRefs = useRef([]);
-
-// 	useEffect(() => {
-// 		const fetchImage = async () => {
-// 			try {
-// 				const res = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=6`);
-// 				const catImages = res.data.map((catObject) => catObject.url);
-// 				setCat(catImages);
-// 			} catch (error) {
-// 				console.log(error);
-// 			}
-// 		};
-
-// 		const handleMouse = (e) => {
-// 			const xAxis = (window.innerWidth / 2 - e.pageX) / 100;
-// 			const yAxis = (window.innerHeight / 2 - e.pageY) / 100;
-
-// 			divRefs.current.forEach((divRef) => {
-// 				divRef.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-// 			});
-// 		};
-
-// 		document.addEventListener("mousemove", handleMouse);
-
-// 		fetchImage();
-
-// 		return () => {
-// 			document.removeEventListener("mousemove", handleMouse);
-// 		};
-// 	}, []);
-
-// 	return (
-// 		<>
-// 			{cat.map((cat, index) => (
-// 				<div ref={(ref) => (divRefs.current[index] = ref)} key={index}>
-// 					<img src={cat} alt="cat"></img>
-// 					<h2>Imagen {index + 1}</h2>
-// 					<Heart cat={cat} />
-// 					<Stars id={index} />
-// 				</div>
-// 			))}
-// 		</>
-// 	);
-// };
-
-// export { Cats, CatImg };

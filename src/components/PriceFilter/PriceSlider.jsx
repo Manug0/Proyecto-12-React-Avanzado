@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./PriceSlider.css";
 import Slider from "react-slider";
+import { PriceContext } from "./PriceContext";
 
 const PriceSlider = () => {
-	const [value, setValue] = useState([130, 250]);
+	const [value, setValue] = useContext(PriceContext);
 
 	const handleChange = (newValue) => {
 		setValue(newValue);
@@ -12,7 +13,7 @@ const PriceSlider = () => {
 	return (
 		<div>
 			{" "}
-			<Slider value={value} onChange={handleChange} min={130} max={500} withBars />
+			<Slider value={value} onChange={handleChange} min={299} max={1499} withBars />
 			<p className="price-range">
 				Precio: {value[0]}€ - {value[1]}€
 			</p>

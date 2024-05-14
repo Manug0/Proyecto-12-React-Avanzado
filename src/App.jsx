@@ -1,15 +1,15 @@
 import "./App.css";
 
-import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
 
 import Form from "./pages/Form/Form";
-import NotFound from "./components/NotFound";
 import Favorites from "./pages/Favorites/Favorites";
-import Footer from "./components/Footer";
 import PCs from "./pages/Products/PCs";
+import Header from "./components/Header/Header";
+import NotFound from "./pages/NotFound/NotFound";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 	return (

@@ -1,7 +1,6 @@
 .favoritesPage {
 	width: 90%;
-	margin: 0 auto;
-	margin-top: 96px;
+	margin: 130px auto;
 }
 
 .favoritesPage h2 {
@@ -9,10 +8,15 @@
 }
 
 .favorites {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 10px;
 	justify-content: center;
-	gap: 60px;
+
+	/* display: flex;
+	flex-wrap: wrap;
+	gap: 60px; */
 	height: 100%;
 }
 .favorites > div > div:nth-child(2) {
@@ -21,12 +25,18 @@
 	gap: 20px;
 }
 
-.favorites img {
+.favorite-product img {
+	min-width: 300px;
 	max-width: 300px;
 	border-radius: 8px;
 	transition: transform 0.5s ease;
 }
 
-.favorites img:hover {
+.favorite-product img:hover {
 	transform: scale(1.05);
+}
+
+.favorite-product p {
+	font-family: "Oswald", sans-serif;
+	margin-bottom: 8px;
 }

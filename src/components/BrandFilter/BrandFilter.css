@@ -16,6 +16,9 @@
 	border-radius: 50px;
 	background-color: rgb(99, 99, 99);
 }
+.brand-checkbox input:hover {
+	cursor: pointer;
+}
 
 .brand-checkbox input.dark-theme {
 	background-color: hsl(0, 0%, 86%);
