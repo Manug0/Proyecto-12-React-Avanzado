@@ -43,3 +43,7 @@
 	align-items: center;
 	margin-bottom: 10px;
 }
+.reviews p {
+	margin-left: -10px;
+	margin-top: -7px;
+}

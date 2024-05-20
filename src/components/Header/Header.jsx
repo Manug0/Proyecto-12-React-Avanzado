@@ -26,7 +26,7 @@ const Header = () => {
 	const handleTheme = () => {
 		setDarkTheme(!darkTheme);
 		const elements = document.querySelectorAll(
-			"body, header, .request-info, h2, h3, h4, h5, p, i, a, label, input, form button, .PcCard, .info, footer, .slider "
+			"body, header, .request-info, h2, h3, h4, h5, p, i, a, label, input, form button, .PcCard, .info, footer, .slider, .rect "
 		);
 		elements.forEach((element) => {
 			if (darkTheme) {
