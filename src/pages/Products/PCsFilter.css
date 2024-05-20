@@ -5,4 +5,5 @@
 	gap: 1.875rem;
 	flex-direction: column;
 	min-width: 250px;
+	height: fit-content;
 }

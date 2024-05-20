@@ -5,6 +5,24 @@ import "./Header.css";
 const Header = () => {
 	const [darkTheme, setDarkTheme] = useState(false);
 
+	window.addEventListener("scroll", function () {
+		const header = document.querySelector("header");
+		const headerContent = document.querySelector(".header-content");
+		const logo = document.querySelector(".logo");
+		const nav = document.querySelector("nav");
+		if (window.scrollY > 0) {
+			header.classList.add("squeeze");
+			headerContent.classList.add("squeeze");
+			logo.classList.add("squeeze");
+			nav.classList.add("squeeze");
+		} else {
+			header.classList.remove("squeeze");
+			headerContent.classList.remove("squeeze");
+			logo.classList.remove("squeeze");
+			nav.classList.remove("squeeze");
+		}
+	});
+
 	const handleTheme = () => {
 		setDarkTheme(!darkTheme);
 		const elements = document.querySelectorAll(
