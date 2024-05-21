@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./PCs.css";
 import PCsCards from "./PCsCards";
 import PCsFilter from "./PCsFilter";
 import { BrandProvider } from "../../components/BrandFilter/BrandContext";
 import { PriceProvider } from "../../components/PriceFilter/PriceContext";
+import Favorites from "../../pages/Favorites/Favorites";
 
-// usememo?
-
-const PCs = () => {
+const PCs = ({ cart, setCart, favRef }) => {
 	return (
 		<div className="pcsPage">
 			<div className="info">
@@ -22,6 +21,7 @@ const PCs = () => {
 					<PriceProvider>
 						<PCsFilter />
 						<PCsCards />
+						<Favorites ref={favRef} />
 					</PriceProvider>
 				</BrandProvider>
 			</div>

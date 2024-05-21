@@ -4,6 +4,11 @@
 	text-align: center;
 }
 
+body.no-scroll {
+	overflow: hidden;
+	padding-right: 0.6rem;
+}
+
 .App {
 	min-height: 100vh;
 	display: flex;

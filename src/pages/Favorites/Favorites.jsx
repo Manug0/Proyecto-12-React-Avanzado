@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import "./Favorites.css";
 import { useFavorites } from "./FavoritesProvider";
 import DeleteFav from "../../components/DeleteCart/DeleteFav";
 
-const Favorites = () => {
+const Favorites = forwardRef((props, ref) => {
 	const { favorites, removeFavorite } = useFavorites();
 	const [deleteFav, setDeleteFav] = useState(false);
 	const [buttons, setButtons] = useState({});
@@ -20,7 +20,7 @@ const Favorites = () => {
 	};
 
 	return (
-		<div className="favoritesPage">
+		<div ref={ref} className="favoritesPage">
 			<h2>Tu carrito con los productos favoritos</h2>
 			<br />
 			<div className="favorites">
@@ -30,11 +30,12 @@ const Favorites = () => {
 						onMouseLeave={() => showButtons(computer)}>
 						<div className="favorite-product">
 							<img src={`/src/assets/${computer.name}.webp`} alt="computer"></img>
-							<p>{computer.name}</p>
-							<p>{computer.price}€</p>
+							<div className="favorite-product-info">
+								<p>{computer.name}</p>
+								<p>{computer.price}€</p>
+							</div>
 						</div>
 						<div>
-							{/* incapaz de hacer estilos en linea */}
 							<DeleteFav
 								style={buttons[computer] && { opacity: 1 }}
 								onClick={() => handleDelete(computer)}
@@ -45,6 +46,6 @@ const Favorites = () => {
 			</div>
 		</div>
 	);
-};
+});
 
 export default Favorites;
