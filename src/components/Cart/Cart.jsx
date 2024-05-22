@@ -1,18 +1,22 @@
-import React, { useState } from "react";
-import "./Cart.css";
+import React from "react";
 import { useFavorites } from "../../pages/Favorites/FavoritesProvider";
+import { useCounter } from "../Counter/CounterProvider";
+import "./Cart.css";
 
 const Cart = ({ computer }) => {
-	const { addFavorite } = useFavorites();
-	const [liked, setLiked] = useState(false);
+	const { favorites, addFavorite } = useFavorites();
+	const { incrementCounter } = useCounter();
 
 	const toggleLiked = () => {
-		setLiked(!liked);
-		if (!liked) {
+		if (favorites.some((fav) => fav.name === computer.name)) {
+			incrementCounter(computer.name);
+		} else {
 			addFavorite(computer);
+			incrementCounter(computer.name);
 		}
 	};
-	return <i onClick={toggleLiked} class="ri-shopping-bag-4-fill"></i>;
+
+	return <i onClick={toggleLiked} className="ri-shopping-bag-4-fill"></i>;
 };
 
 export default Cart;

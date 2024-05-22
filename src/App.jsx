@@ -63,7 +63,6 @@ function App() {
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<div className={`overlay ${cart ? "visible" : ""}`} onClick={() => setCart(false)}></div>
-			{/* {cart && <Favorites className="visible" />} */}
 			<Footer />
 		</div>
 	);

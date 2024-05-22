@@ -17,7 +17,7 @@ const Header = forwardRef(({ openCart, headerRef }) => {
 	const handleTheme = () => {
 		setDarkTheme(!darkTheme);
 		const elements = document.querySelectorAll(
-			"body, header, .request-info, h2, h3, h4, h5, p, i, a, label, input, form button, .PcCard, .info, footer, .slider, .rect "
+			"body, header, .request-info, h2, h3, h4, h5, p, i, a, label, input, form button, .PcCard, .info, footer, .slider, .rect, .favoritesPage "
 		);
 		elements.forEach((element) => {
 			if (darkTheme) {

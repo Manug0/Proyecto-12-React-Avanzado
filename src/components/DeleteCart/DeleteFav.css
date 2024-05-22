@@ -1,8 +1,8 @@
-.ri-close-circle-fill {
-	font-size: 30px;
+.ri-delete-bin-line {
+	font-size: 20px;
 	color: rgb(255, 126, 126);
 	transition: opacity 0.5s ease;
 }
-.ri-close-circle-fill:hover {
+.ri-delete-bin-line:hover {
 	cursor: pointer;
 }

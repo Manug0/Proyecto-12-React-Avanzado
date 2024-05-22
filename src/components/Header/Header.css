@@ -20,7 +20,7 @@ header.dark-theme {
 }
 header.no-scroll {
 	overflow: hidden;
-	padding-right: 0.6rem;
+	padding-right: 0.5rem;
 }
 .logo {
 	position: absolute;
@@ -72,6 +72,10 @@ nav.squeeze {
 }
 .navlink.dark-theme:hover {
 	color: rgb(162, 255, 255);
+}
+
+.ri-shopping-cart-line:hover {
+	cursor: pointer;
 }
 
 .ri-sun-line,
