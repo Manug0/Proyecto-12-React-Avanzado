@@ -6,4 +6,5 @@
 	flex-direction: column;
 	min-width: 250px;
 	height: fit-content;
+	font-family: system-ui;
 }

@@ -52,6 +52,7 @@ nav {
 	padding: 30px;
 	font-size: 24px;
 	transition: font-size 0.4s ease;
+	font-family: system-ui;
 }
 nav.squeeze {
 	font-size: 20px;

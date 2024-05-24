@@ -1,0 +1,65 @@
+.product-preview {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	left: 0%;
+	border-radius: 15px;
+	background-color: #d9d9d9;
+	opacity: 0.75;
+}
+.price-preview {
+	position: absolute;
+	top: 67.8%;
+	left: 40.17%;
+	font-weight: 600;
+	color: #75c70c;
+}
+.laptop-name {
+	position: absolute;
+	height: 15.25%;
+	width: 50%;
+	top: 42.37%;
+	left: 40.17%;
+	font-weight: 600;
+	display: inline-block;
+}
+.laptop-type {
+	position: absolute;
+	height: 16.1%;
+	width: 15.95%;
+	top: 17.8%;
+	left: 40.17%;
+	display: inline-block;
+}
+.image-preview {
+	position: absolute;
+	height: 60.17%;
+	width: 27.07%;
+	top: 22.88%;
+	right: 67.52%;
+	bottom: 16.95%;
+	left: 5.41%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.preview-card {
+	width: 100%;
+	position: relative;
+	height: 118px;
+	text-align: left;
+	font-size: 15px;
+	color: #000;
+	font-family: Inter;
+}
+.home-cards {
+	display: flex;
+	width: 80%;
+	margin: auto;
+	gap: 30px;
+	margin-bottom: 80px;
+}

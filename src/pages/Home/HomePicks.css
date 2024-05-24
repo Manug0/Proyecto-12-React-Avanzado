@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.heading {
+	align-self: stretch;
+	position: relative;
+	line-height: 120%;
+}
+.headingContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 800px;
+}
+.imageLummi {
+	align-self: stretch;
+	position: relative;
+	max-width: 100%;
+	overflow: hidden;
+	height: 312px;
+	flex-shrink: 0;
+	object-fit: cover;
+}
+.cardTitle {
+	align-self: stretch;
+	position: relative;
+	line-height: 160%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.cardDescription {
+	align-self: stretch;
+	position: relative;
+	line-height: 160%;
+	display: -webkit-inline-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.readMore {
+	align-self: stretch;
+	position: relative;
+	font-size: 12px;
+	line-height: 160%;
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 32px;
+	flex-shrink: 0;
+}
+.copy {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 4px;
+}
+.content1 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 16px;
+}
+.cards {
+	flex: 1;
+	border-radius: 8px;
+	background-color: #f9e3d7;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	min-width: 260px;
+}
+.cardsGrid {
+	align-self: stretch;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 24px;
+	text-align: left;
+	font-size: 14px;
+}
+.content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 24px;
+	max-width: 1200px;
+}
+.typethreeTallCards {
+	width: 100%;
+	position: relative;
+	background-color: #faeadd;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 120px 16px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 56px;
+	color: #1c3250;
+	font-family: "Inter";
+}

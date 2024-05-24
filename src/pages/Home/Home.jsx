@@ -1,12 +1,15 @@
 import React from "react";
 import "./Home.css";
+import HomeHero from "./HomeHero";
+import HomePicks from "./HomePicks";
+import HomeCards from "./HomeCards";
 
 const Home = () => {
 	return (
-		<div className="home-container">
-			<h2>MyPC</h2>
-			<br />
-			<h3>La tienda líder en portátiles de España</h3>
+		<div>
+			<HomeHero />
+			<HomeCards />
+			<HomePicks />
 		</div>
 	);
 };
