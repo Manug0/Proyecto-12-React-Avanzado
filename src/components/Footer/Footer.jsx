@@ -10,10 +10,19 @@ const Footer = () => {
 	};
 	return (
 		<footer>
-			<div className="footer-content">
-				<div className="contact">
-					<h5>Contacto</h5>
+			<div className="footer-main-content">
+				<div className="support">
+					<h5>Soporte</h5>
 					<p onClick={goToForm}>Asistencia</p>
+					<p>FAQs</p>
+					<p>Envíos</p>
+					<p>Devoluciones</p>
+				</div>
+				<div className="legal">
+					<h5>Legal</h5>
+					<p>Política de privacidad</p>
+					<p>Términos y condiciones</p>
+					<p>Cookies</p>
 				</div>
 				<div className="socials">
 					<i class="ri-twitter-x-line"></i>
@@ -21,6 +30,10 @@ const Footer = () => {
 					<i class="ri-youtube-line"></i>
 					<i class="ri-facebook-box-line"></i>
 				</div>
+			</div>
+			<div className="rights">
+				<p>© MyPC 2024. Todos los derechos reservados</p>
+				<p>Made by Manu 🖌️</p>
 			</div>
 		</footer>
 	);
