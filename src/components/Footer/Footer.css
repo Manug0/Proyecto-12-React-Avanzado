@@ -26,6 +26,9 @@ footer.dark-theme {
 	flex-direction: column;
 	gap: 15px;
 }
+.contact p:hover {
+	cursor: pointer;
+}
 
 .socials {
 	display: flex;

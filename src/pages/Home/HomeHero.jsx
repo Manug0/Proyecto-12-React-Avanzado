@@ -1,7 +1,13 @@
 import React from "react";
 import "./HomeHero.css";
+import { useNavigate } from "react-router-dom";
 
 const HomeHero = () => {
+	const navigate = useNavigate();
+
+	const goToPCs = () => {
+		navigate("/pcs");
+	};
 	return (
 		<div className="softwareHeroLaptopMockup">
 			<div className="wrapper">
@@ -13,13 +19,12 @@ const HomeHero = () => {
 								Encuentre el portátil perfecto para sus necesidades a precios inmejorables.
 							</div>
 						</div>
-						<div className="buttonCombo">
-							<div className="ctaButton">
-								<div className="textContainer">
-									<p className="cta">Comprar ahora</p>
-								</div>
-							</div>
-						</div>
+
+						<button className="buy-now-button" onClick={goToPCs}>
+							<p className="buy-now-text">
+								Comprar ahora <i class="ri-arrow-right-s-line"></i>
+							</p>
+						</button>
 					</div>
 				</div>
 				<div className="mediaLayouts">

@@ -2,13 +2,15 @@
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	top: 0%;
-	right: 0%;
-	bottom: 0%;
-	left: 0%;
 	border-radius: 15px;
 	background-color: #d9d9d9;
 	opacity: 0.75;
+	transition: 0.3s ease;
+}
+.product-preview:hover {
+	cursor: pointer;
+	/* border: 1px solid #24a7a7; */
+	opacity: 0.55;
 }
 .price-preview {
 	position: absolute;
@@ -55,6 +57,7 @@
 	font-size: 15px;
 	color: #000;
 	font-family: Inter;
+	border-radius: 15px;
 }
 .home-cards {
 	display: flex;
