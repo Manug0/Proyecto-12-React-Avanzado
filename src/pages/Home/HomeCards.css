@@ -9,7 +9,6 @@
 }
 .product-preview:hover {
 	cursor: pointer;
-	/* border: 1px solid #24a7a7; */
 	opacity: 0.55;
 }
 .price-preview {

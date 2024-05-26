@@ -5,6 +5,8 @@ import HomePicks from "./HomePicks";
 import HomeCards from "./HomeCards";
 
 const Home = () => {
+	window.scrollTo(0, 0);
+
 	return (
 		<div>
 			<HomeHero />

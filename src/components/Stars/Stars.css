@@ -4,6 +4,7 @@
 }
 
 #rect {
+	fill: #ffff;
 	transition: fill 0.4s ease;
 }
 .dark-theme #rect {

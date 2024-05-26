@@ -8,6 +8,12 @@ body.no-scroll {
 	overflow: hidden;
 	padding-right: 0.5rem;
 }
+body.no-scroll header {
+	padding-right: 0.5rem;
+}
+body.no-scroll .ri-sun-line {
+	padding-right: 0.5rem;
+}
 
 .App {
 	min-height: 100vh;

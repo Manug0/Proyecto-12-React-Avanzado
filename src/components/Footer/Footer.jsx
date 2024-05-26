@@ -32,7 +32,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="rights">
-				<p>© MyPC 2024. Todos los derechos reservados</p>
+				<p>© MyPC 2024. </p>
 				<p>Made by Manu 🖌️</p>
 			</div>
 		</footer>
