@@ -47,6 +47,8 @@ header.no-scroll {
 
 nav {
 	display: flex;
+	position: relative;
+	left: -450px;
 	gap: 120px;
 	justify-content: center;
 	padding: 30px;
@@ -83,6 +85,7 @@ nav.squeeze {
 .ri-moon-line {
 	position: absolute;
 	right: 30px;
+	font-size: 24px;
 	cursor: pointer;
 }
 

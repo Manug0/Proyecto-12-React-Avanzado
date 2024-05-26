@@ -5,13 +5,12 @@ import Cart from "../../components/Cart/Cart";
 import { BrandContext } from "../../components/BrandFilter/BrandContext";
 import { PriceContext } from "../../components/PriceFilter/PriceContext";
 import ProductPopup from "./ProductPopup";
+import useProductPopup from "../../components/useProductPopup";
 
 const PCsCards = () => {
 	const [checked] = useContext(BrandContext);
 	const [value] = useContext(PriceContext);
-	const [selectedProduct, setSelectedProduct] = useState(null);
-	const [isPopupVisible, setIsPopupVisible] = useState(false);
-	const popupRef = useRef(null);
+	const { selectedProduct, isPopupVisible, popupRef, openPopup, closePopup } = useProductPopup();
 
 	const computers = [
 		{
@@ -105,41 +104,10 @@ const PCsCards = () => {
 		return false;
 	});
 
-	const handleCardClick = (computer) => {
-		setSelectedProduct(computer);
-		setIsPopupVisible(true);
-	};
-
-	const closePopup = () => {
-		setIsPopupVisible(false);
-		setSelectedProduct(null);
-	};
-
-	const handleClickOutisdePopup = (event) => {
-		if (popupRef.current && !popupRef.current.contains(event.target)) {
-			closePopup();
-		}
-	};
-
-	useEffect(() => {
-		if (isPopupVisible) {
-			document.body.classList.add("no-scroll");
-			document.addEventListener("mousedown", handleClickOutisdePopup);
-		} else {
-			document.body.classList.remove("no-scroll");
-			document.removeEventListener("mousedown", handleClickOutisdePopup);
-		}
-
-		return () => {
-			document.body.classList.remove("no-scroll");
-			document.removeEventListener("mousedown", handleClickOutisdePopup);
-		};
-	}, [isPopupVisible]);
-
 	return (
 		<div className="Pcs">
 			{filterComputers.map((computer, index) => (
-				<div className="PcCard" key={index} onClick={() => handleCardClick(computer)}>
+				<div className="PcCard" key={index} onClick={() => openPopup(computer)}>
 					<img key={index} src={`/src/assets/${computer.name}.webp`} alt={computer.name} />
 					<div className="cart-container">
 						<Cart computer={computer} />

@@ -5,12 +5,8 @@
 	border-radius: 15px;
 	background-color: #d9d9d9;
 	opacity: 0.75;
-	transition: 0.3s ease;
 }
-.product-preview:hover {
-	cursor: pointer;
-	opacity: 0.55;
-}
+
 .price-preview {
 	position: absolute;
 	top: 67.8%;
@@ -37,12 +33,13 @@
 }
 .image-preview {
 	position: absolute;
-	height: 60.17%;
-	width: 27.07%;
-	top: 22.88%;
-	right: 67.52%;
-	bottom: 16.95%;
-	left: 5.41%;
+	height: 60%;
+	min-width: 100px;
+	max-width: 110px;
+	top: 23%;
+	right: 67%;
+	bottom: 17%;
+	left: 5%;
 	max-width: 100%;
 	overflow: hidden;
 	max-height: 100%;
@@ -57,6 +54,11 @@
 	color: #000;
 	font-family: Inter;
 	border-radius: 15px;
+	transition: 0.3s ease;
+}
+.preview-card:hover {
+	cursor: pointer;
+	opacity: 0.55;
 }
 .home-cards {
 	display: flex;

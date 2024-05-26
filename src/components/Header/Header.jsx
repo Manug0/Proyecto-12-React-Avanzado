@@ -68,11 +68,11 @@ const Header = forwardRef(({ openCart, headerRef }) => {
 						Portátiles
 					</NavLink>
 					<i class="ri-shopping-cart-line" onClick={openCart}></i>
-					<i
-						onClick={handleTheme}
-						class={document.body.classList.contains("dark-theme") ? "ri-moon-line" : "ri-sun-line"}
-						id="change-theme-button"></i>
 				</nav>
+				<i
+					onClick={handleTheme}
+					class={document.body.classList.contains("dark-theme") ? "ri-moon-line" : "ri-sun-line"}
+					id="change-theme-button"></i>
 			</div>
 		</header>
 	);
