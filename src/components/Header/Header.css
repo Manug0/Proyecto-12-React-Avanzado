@@ -47,9 +47,9 @@ header.no-scroll {
 
 nav {
 	display: flex;
-	position: relative;
-	left: -450px;
-	gap: 120px;
+	position: absolute;
+	right: 80px;
+	gap: 30px;
 	justify-content: center;
 	padding: 30px;
 	font-size: 24px;
@@ -61,12 +61,12 @@ nav.squeeze {
 }
 
 .navlink {
-	color: rgb(36, 167, 167);
+	color: var(--secondary-color);
 	transition: color 0.5s ease;
 }
 
 .navlink.dark-theme {
-	color: rgb(122, 209, 209);
+	color: var(--secondary-color);
 	transition: color 0.5s ease;
 }
 
@@ -90,5 +90,5 @@ nav.squeeze {
 }
 
 .ri-moon-line {
-	color: azure;
+	color: var(--primary-color);
 }

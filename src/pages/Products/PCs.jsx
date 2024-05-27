@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./PCs.css";
 import PCsCards from "./PCsCards";
 import PCsFilter from "./PCsFilter";
@@ -6,7 +6,7 @@ import { BrandProvider } from "../../components/BrandFilter/BrandContext";
 import { PriceProvider } from "../../components/PriceFilter/PriceContext";
 import Favorites from "../../pages/Favorites/Favorites";
 
-const PCs = ({ cart, setCart, favRef }) => {
+const PCs = ({ cart, setCart, favRef, closeIconRef }) => {
 	window.scrollTo(0, 0);
 
 	return (
@@ -16,7 +16,7 @@ const PCs = ({ cart, setCart, favRef }) => {
 					<PriceProvider>
 						<PCsFilter />
 						<PCsCards />
-						<Favorites ref={favRef} />
+						<Favorites refs={{ favRef, closeIconRef }} />
 					</PriceProvider>
 				</BrandProvider>
 			</div>

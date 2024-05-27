@@ -12,7 +12,7 @@
 	position: relative;
 	font-size: 22px;
 	line-height: 140%;
-	color: #24a7a7;
+	color: var(--secondary-color);
 }
 .headingText {
 	align-self: stretch;
@@ -30,9 +30,9 @@
 	position: relative;
 	all: unset;
 	align-items: center;
-	background-color: #ffffff;
+	background-color: var(--primary-color);
 	border: 2px solid;
-	border-color: #000000;
+	border-color: var(--tertiary-color);
 	box-sizing: border-box;
 	display: inline-flex;
 	flex: 0 0 auto;
@@ -40,22 +40,35 @@
 	justify-content: center;
 	padding: 20px 32px;
 	position: relative;
-	transition: all 0.5s ease;
+	transition: all 0.4s ease;
 }
-
+.buy-now-button.dark-theme {
+	background-color: var(--tertiary-color);
+	color: var(--primary-color);
+	border-color: var(--primary-color);
+}
+.buy-now-button.dark-theme:hover {
+	background-color: var(--primary-color);
+}
 .buy-now-text {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	padding: 4px;
-	color: #000000;
+	color: var(--tertiary-color);
+}
+.buy-now-button.dark-theme:hover .buy-now-text {
+	color: var(--tertiary-color);
+}
+.buy-now-button.dark-theme:hover .ri-arrow-right-s-line {
+	color: var(--tertiary-color);
 }
 
 .ri-arrow-right-s-line {
 	height: 8px;
 	margin-left: 8px;
-	color: #000000;
+	color: var(--tertiary-color);
 }
 
 .buy-now-text {
@@ -71,15 +84,15 @@
 }
 
 .buy-now-button:hover {
-	background-color: #000000;
+	background-color: var(--tertiary-color);
 	cursor: pointer;
 }
 
 .buy-now-button:hover .buy-now-text {
-	color: #ffffff;
+	color: var(--primary-color);
 }
 .buy-now-button:hover .ri-arrow-right-s-line {
-	color: #ffffff;
+	color: var(--primary-color);
 }
 
 .buy-now-button:hover .ri-arrow-right-s-line {
@@ -93,20 +106,6 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0px 4px;
-}
-.secondaryButton {
-	flex: 1;
-	border-radius: 4px;
-	border: 1px solid #a1a1aa;
-	box-sizing: border-box;
-	height: 53px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	padding: 16px 24px;
-	min-width: 140px;
-	color: #18181b;
 }
 .copyComponent {
 	width: 100%;
@@ -161,10 +160,10 @@
 	justify-content: center;
 	max-width: 1200px;
 }
-.softwareHeroLaptopMockup {
+.home-hero {
 	width: 100%;
 	position: relative;
-	background-color: #fff;
+	background-color: var(--primary-color);
 	overflow: hidden;
 	display: flex;
 	flex-direction: row;
@@ -176,4 +175,8 @@
 	font-size: 72px;
 	color: #18181b;
 	font-family: Inter;
+	transition: var(--dark-theme-transition-bg);
+}
+.home-hero.dark-theme {
+	background-color: var(--dark-theme-background);
 }

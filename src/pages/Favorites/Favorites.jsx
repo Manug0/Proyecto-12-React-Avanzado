@@ -5,9 +5,10 @@ import ProductCounter from "../../components/Counter/ProductCounter";
 import "./Favorites.css";
 import { useCounter } from "../../components/Counter/CounterProvider";
 
-const Favorites = forwardRef((props, ref) => {
+const Favorites = forwardRef(({ refs }, ref) => {
 	const { favorites, removeFavorite } = useFavorites();
 	const { setCounter, counter } = useCounter();
+	const { favRef, closeIconRef } = refs || {};
 
 	const handleDelete = (computer) => {
 		removeFavorite(computer);
@@ -18,10 +19,10 @@ const Favorites = forwardRef((props, ref) => {
 	};
 
 	return (
-		<div ref={ref} className="favoritesPage">
+		<div ref={favRef} className="favoritesPage">
 			<div className="my-cart">
 				<h2>Mi carrito</h2>
-				<i className="ri-close-line"></i>
+				<i ref={closeIconRef} className="ri-close-line"></i>
 			</div>
 			<div className="favorites">
 				{favorites.map((computer) => (
@@ -34,11 +35,9 @@ const Favorites = forwardRef((props, ref) => {
 								<p>
 									Uds: <ProductCounter productName={computer.name} />
 								</p>
-								<p>
-									{counter[computer.name] > 1 && (
-										<p> Total:{counter[computer.name] * computer.price}€</p>
-									)}
-								</p>
+								{counter[computer.name] > 1 && (
+									<p>Total: {counter[computer.name] * computer.price}€</p>
+								)}
 							</div>
 						</div>
 						<div>

@@ -9,7 +9,7 @@ const HomePicks = () => {
 		navigate("/pcs");
 	};
 	return (
-		<div className="typethreeTallCards">
+		<div className="home-picks">
 			<div className="content">
 				<div className="headingContainer">
 					<b className="heading">Mejores elecciones para ti</b>

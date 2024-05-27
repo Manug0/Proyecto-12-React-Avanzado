@@ -7,7 +7,8 @@ const Cart = ({ computer }) => {
 	const { favorites, addFavorite } = useFavorites();
 	const { incrementCounter } = useCounter();
 
-	const toggleLiked = () => {
+	const toggleLiked = (event) => {
+		event.stopPropagation();
 		if (favorites.some((fav) => fav.name === computer.name)) {
 			incrementCounter(computer.name);
 		} else {

@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react";
 import { useCounter } from "./CounterProvider";
-import "./ProductCounter.css";
 
 const ProductCounter = forwardRef(({ productName }, ref) => {
 	const { getCounter } = useCounter();

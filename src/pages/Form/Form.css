@@ -1,6 +1,8 @@
 .request-info {
-	margin: 0 auto;
-	margin-top: auto;
+	margin: auto;
+	margin-top: 150px;
+	margin-bottom: 150px;
+
 	width: 60%;
 }
 form {
@@ -30,7 +32,7 @@ form button {
 	height: 2rem;
 	border-radius: 10px;
 	background-color: hsl(0, 0%, 31%);
-	transition: background-color 0.3s ease;
+	transition: var(--dark-theme-transition-bg);
 }
 form button:hover {
 	cursor: pointer;

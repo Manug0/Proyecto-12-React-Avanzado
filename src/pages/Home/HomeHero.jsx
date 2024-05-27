@@ -9,7 +9,7 @@ const HomeHero = () => {
 		navigate("/pcs");
 	};
 	return (
-		<div className="softwareHeroLaptopMockup">
+		<div className="home-hero">
 			<div className="wrapper">
 				<div className="copyContainer">
 					<div className="copyComponent">

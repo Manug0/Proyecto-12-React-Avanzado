@@ -4,10 +4,10 @@
 }
 
 #rect {
-	fill: #ffff;
+	fill: var(--primary-color);
 	transition: fill 0.4s ease;
 }
 .dark-theme #rect {
-	fill: #3a3a3a;
+	fill: var(--dark-theme-background);
 	transition: fill 0.4s ease;
 }

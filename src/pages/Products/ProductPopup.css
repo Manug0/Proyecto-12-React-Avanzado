@@ -12,13 +12,18 @@
 }
 
 .product-popup-content {
-	background: #fff;
+	background-color: var(--primary-color);
 	padding: 20px;
 	border-radius: 8px;
 	position: relative;
 	width: 80%;
 	max-width: 600px;
 	height: fit-content;
+	color: black;
+	transition: var(--dark-theme-transition-bg);
+}
+.product-popup-content.dark-theme {
+	background-color: red;
 }
 .product-popup-content img {
 	width: 50%;
@@ -27,7 +32,7 @@
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	color: #000000;
+	color: var(--tertiary-color);
 	border: none;
 	border-radius: 50%;
 	width: 30px;
@@ -47,9 +52,9 @@
 }
 .cart-container-popup .ri-shopping-bag-4-fill {
 	font-size: 30px;
-	color: #ffff;
+	color: var(--primary-color);
 	cursor: pointer;
 }
 .cart-container-popup .ri-shopping-bag-4-fill:hover {
-	color: #24a7a7;
+	color: var(--secondary-color);
 }

@@ -14,6 +14,9 @@
 	font-weight: 600;
 	color: #75c70c;
 }
+.price-preview.dark-theme {
+	color: #83dd0d;
+}
 .laptop-name {
 	position: absolute;
 	height: 15.25%;
@@ -51,10 +54,10 @@
 	height: 118px;
 	text-align: left;
 	font-size: 15px;
-	color: #000;
+	color: var(--tertiary-color);
 	font-family: Inter;
 	border-radius: 15px;
-	transition: 0.3s ease;
+	transition: all 0.3s ease;
 }
 .preview-card:hover {
 	cursor: pointer;
@@ -66,4 +69,12 @@
 	margin: auto;
 	gap: 30px;
 	margin-bottom: 80px;
+}
+
+.home-cards-container {
+	width: 100%;
+	transition: var(--dark-theme-transition-bg);
+}
+.home-cards-container.dark-theme {
+	background-color: var(--dark-theme-background);
 }

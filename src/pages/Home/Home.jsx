@@ -3,16 +3,18 @@ import "./Home.css";
 import HomeHero from "./HomeHero";
 import HomePicks from "./HomePicks";
 import HomeCards from "./HomeCards";
+import Favorites from "../Favorites/Favorites";
 
-const Home = () => {
+const Home = ({ cart, setCart, favRef, closeIconRef }) => {
 	window.scrollTo(0, 0);
 
 	return (
-		<div>
+		<>
 			<HomeHero />
 			<HomeCards />
 			<HomePicks />
-		</div>
+			<Favorites refs={{ favRef, closeIconRef }} />
+		</>
 	);
 };
 

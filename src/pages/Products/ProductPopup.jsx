@@ -1,9 +1,23 @@
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef, useEffect } from "react";
 import "./ProductPopup.css";
 import Cart from "../../components/Cart/Cart";
 import Stars from "../../components/Stars/Stars";
+import { useTheme } from "../../components/ThemeContext";
 
-const ProductPopup = forwardRef(({ computer, closePopup }, ref) => {
+const ProductPopup = forwardRef(({ computer, closePopup, isVisible }, ref) => {
+	const { darkTheme, updateThemeClasses } = useTheme();
+
+	useEffect(() => {
+		if (isVisible) {
+			const popup = document.querySelector(".product-popup-content");
+			if (popup) {
+				updateThemeClasses(darkTheme);
+			}
+		}
+	}, [isVisible, darkTheme, updateThemeClasses]);
+
+	if (!isVisible) return null;
+
 	return (
 		<div className="product-popup">
 			<div className="product-popup-content" ref={ref}>
