@@ -20,9 +20,13 @@ footer.dark-theme {
 
 .footer-main-content {
 	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
 	justify-content: space-evenly;
 	height: 100%;
 	padding-bottom: 2rem;
+	width: 90%;
+	margin: auto;
 }
 
 .support,

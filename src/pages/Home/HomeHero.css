@@ -24,10 +24,6 @@
 }
 
 .buy-now-button {
-	align-items: center;
-	display: inline-flex;
-	justify-content: center;
-	position: relative;
 	all: unset;
 	align-items: center;
 	background-color: var(--primary-color);
@@ -132,14 +128,13 @@
 	position: absolute;
 	height: 60%;
 	bottom: 25%;
-	left: 0%;
+	right: 0%;
 	max-width: 100%;
 	overflow: hidden;
 	max-height: 100%;
-	object-fit: cover;
 }
 .device {
-	width: 914.5px;
+	width: 100%;
 	position: relative;
 	height: 545px;
 }
@@ -161,7 +156,8 @@
 	max-width: 1200px;
 }
 .home-hero {
-	width: 100%;
+	width: 90%;
+	margin: auto;
 	position: relative;
 	background-color: var(--primary-color);
 	overflow: hidden;
@@ -179,4 +175,98 @@
 }
 .home-hero.dark-theme {
 	background-color: var(--dark-theme-background);
+}
+
+@media (max-width: 1300px) {
+	.appleMacbookAir13Silver {
+		height: 250px;
+		width: 400px;
+		right: 10%;
+	}
+	.heading {
+		font-size: 30px;
+	}
+	.subheading {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.wrapper {
+		flex-direction: column;
+	}
+	.mediaLayouts {
+		margin: auto;
+		margin-top: 50px;
+	}
+	.device {
+		width: 100%;
+		height: fit-content;
+	}
+	.appleMacbookAir13Silver {
+		position: static;
+		height: 300px;
+		width: 100%;
+		min-width: 500px;
+	}
+	.heading {
+		font-size: 40px;
+	}
+	.subheading {
+		font-size: 22px;
+	}
+	.copyContainer {
+		width: 100%;
+	}
+	.copyComponent {
+		max-width: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.mediaLayouts {
+		min-width: 100px;
+	}
+	.device {
+		width: 100%;
+		height: fit-content;
+	}
+	.appleMacbookAir13Silver {
+		position: static;
+		height: 200px;
+		width: 100%;
+		min-width: 260px;
+	}
+	.buy-now-button {
+		margin: auto;
+	}
+}
+
+@media (max-width: 400px) {
+	.appleMacbookAir13Silver {
+		/* position: static;
+		height: 100px;
+		width: 100%;
+		min-width: 180px; */
+		display: none;
+	}
+	.copyComponent {
+		min-width: 0;
+	}
+	.copyContainer {
+		min-width: 0;
+	}
+	.heading {
+		font-size: 20px;
+	}
+	.subheading {
+		font-size: 16px;
+	}
+	.buy-now-button {
+		width: 140px;
+		padding: 10px;
+	}
+	.buy-now-text {
+		font-size: 11px;
+	}
 }

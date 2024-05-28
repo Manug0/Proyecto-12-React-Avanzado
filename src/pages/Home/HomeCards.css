@@ -19,10 +19,11 @@
 }
 .laptop-name {
 	position: absolute;
-	height: 15.25%;
-	width: 50%;
-	top: 42.37%;
-	left: 40.17%;
+	height: 15%;
+	/* width: 50%; */
+	padding-right: 8px;
+	top: 42%;
+	left: 40%;
 	font-weight: 600;
 	display: inline-block;
 }
@@ -38,7 +39,6 @@
 	position: absolute;
 	height: 60%;
 	min-width: 100px;
-	max-width: 110px;
 	top: 23%;
 	right: 67%;
 	bottom: 17%;
@@ -58,6 +58,7 @@
 	font-family: Inter;
 	border-radius: 15px;
 	transition: all 0.3s ease;
+	min-width: 300px;
 }
 .preview-card:hover {
 	cursor: pointer;
@@ -77,4 +78,54 @@
 }
 .home-cards-container.dark-theme {
 	background-color: var(--dark-theme-background);
+}
+
+@media (max-width: 1200px) {
+	.home-cards {
+		width: 90%;
+	}
+	.preview-card {
+		min-width: 280px;
+		font-size: 12px;
+	}
+
+	.image-preview {
+		min-width: 30px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.preview-card {
+		min-width: 220px;
+		font-size: 10px;
+		height: 90px;
+	}
+
+	.image-preview {
+		width: 70px;
+		height: 50px;
+	}
+}
+
+@media (max-width: 800px) {
+	.home-cards {
+		flex-direction: column;
+		width: 50%;
+	}
+}
+
+@media (max-width: 600px) {
+	.home-cards {
+		width: 70%;
+	}
+
+	.preview-card {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 400px) {
+	.preview-card {
+		font-size: 10px;
+	}
 }
