@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./HomeHero.css";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../components/ThemeContext";
 
 const HomeHero = () => {
 	const navigate = useNavigate();
+	const { darkTheme } = useContext(ThemeContext);
 
 	const goToPCs = () => {
 		navigate("/pcs");
 	};
 	return (
-		<div className="home-hero">
+		<div className={`home-hero ${darkTheme ? "dark-theme" : ""}`}>
 			<div className="wrapper">
 				<div className="copyContainer">
 					<div className="copyComponent">
@@ -20,7 +22,7 @@ const HomeHero = () => {
 							</div>
 						</div>
 
-						<button className="buy-now-button" onClick={goToPCs}>
+						<button className={`buy-now-button ${darkTheme ? "dark-theme" : ""}`} onClick={goToPCs}>
 							<p className="buy-now-text">
 								Comprar ahora <i class="ri-arrow-right-s-line"></i>
 							</p>

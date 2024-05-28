@@ -1,14 +1,16 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useContext } from "react";
 import { useFavorites } from "./FavoritesProvider";
 import DeleteFav from "../../components/DeleteCart/DeleteFav";
 import ProductCounter from "../../components/Counter/ProductCounter";
 import "./Favorites.css";
 import { useCounter } from "../../components/Counter/CounterProvider";
+import { ThemeContext } from "../../components/ThemeContext";
 
 const Favorites = forwardRef(({ refs }, ref) => {
 	const { favorites, removeFavorite } = useFavorites();
 	const { setCounter, counter } = useCounter();
 	const { favRef, closeIconRef } = refs || {};
+	const { darkTheme } = useContext(ThemeContext);
 
 	const handleDelete = (computer) => {
 		removeFavorite(computer);
@@ -19,7 +21,7 @@ const Favorites = forwardRef(({ refs }, ref) => {
 	};
 
 	return (
-		<div ref={favRef} className="favoritesPage">
+		<div ref={favRef} className={`favoritesPage ${darkTheme ? "dark-theme" : ""}`}>
 			<div className="my-cart">
 				<h2>Mi carrito</h2>
 				<i ref={closeIconRef} className="ri-close-line"></i>

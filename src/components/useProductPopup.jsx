@@ -1,6 +1,8 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
 
 const useProductPopup = () => {
+	const { darkTheme } = useContext(ThemeContext);
 	const [selectedProduct, setSelectedProduct] = useState(null);
 	const [isPopupVisible, setIsPopupVisible] = useState(false);
 	const popupRef = useRef(null);
@@ -30,11 +32,19 @@ const useProductPopup = () => {
 			document.removeEventListener("mousedown", handleClickOutsidePopup);
 		}
 
+		if (popupRef.current) {
+			if (darkTheme) {
+				popupRef.current.classList.add("dark-theme");
+			} else {
+				popupRef.current.classList.remove("dark-theme");
+			}
+		}
+
 		return () => {
 			document.body.classList.remove("no-scroll");
 			document.removeEventListener("mousedown", handleClickOutsidePopup);
 		};
-	}, [isPopupVisible]);
+	}, [isPopupVisible, darkTheme]);
 
 	return { selectedProduct, isPopupVisible, popupRef, openPopup, closePopup };
 };

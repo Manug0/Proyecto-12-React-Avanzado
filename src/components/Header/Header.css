@@ -22,6 +22,10 @@ header.no-scroll {
 	overflow: hidden;
 	padding-right: 0.5rem;
 }
+header.no-scroll nav {
+	right: 89px;
+}
+
 .logo {
 	position: absolute;
 	left: 50px;
@@ -88,7 +92,12 @@ nav.squeeze {
 	font-size: 24px;
 	cursor: pointer;
 }
-
+header.no-scroll .ri-sun-line {
+	right: 31px;
+}
+header.no-scroll .ri-moon-line {
+	right: 39px;
+}
 .ri-moon-line {
 	color: var(--primary-color);
 }

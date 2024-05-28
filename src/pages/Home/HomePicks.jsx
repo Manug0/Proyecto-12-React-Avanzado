@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./HomePicks.css";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../components/ThemeContext";
 
 const HomePicks = () => {
+	const { darkTheme } = useContext(ThemeContext);
+
 	const navigate = useNavigate();
 
 	const goToPCs = () => {
 		navigate("/pcs");
 	};
 	return (
-		<div className="home-picks">
+		<div className={`home-picks ${darkTheme ? "dark-theme" : ""}`}>
 			<div className="content">
 				<div className="headingContainer">
 					<b className="heading">Mejores elecciones para ti</b>
@@ -19,8 +22,10 @@ const HomePicks = () => {
 						<img className="imageLummi" alt="GamingLaptop" src="/src/assets/GamingLaptop.png" />
 						<div className="content1">
 							<div className="copy">
-								<p className="cardTitle">PC Gaming</p>
-								<p className="cardDescription">Alto rendimiento para jugar o trabajar</p>
+								<p className={`cardTitle ${darkTheme ? "dark-theme" : ""}`}>PC Gaming</p>
+								<p className={`cardDescription ${darkTheme ? "dark-theme" : ""}`}>
+									Alto rendimiento para jugar o trabajar
+								</p>
 								<button className="readMore" onClick={goToPCs}>
 									Ver portátiles <i class="ri-arrow-right-s-line"></i>
 								</button>
@@ -31,8 +36,10 @@ const HomePicks = () => {
 						<img className="imageLummi" alt="BusinessLaptop" src="/src/assets/BusinessLaptop.png" />
 						<div className="content1">
 							<div className="copy">
-								<p className="cardTitle">Pc para negocios</p>
-								<p className="cardDescription">Eficente y confiable par cualquier tarea</p>
+								<p className={`cardTitle ${darkTheme ? "dark-theme" : ""}`}>Pc para negocios</p>
+								<p className={`cardDescription ${darkTheme ? "dark-theme" : ""}`}>
+									Eficente y confiable par cualquier tarea
+								</p>
 								<button className="readMore" onClick={goToPCs}>
 									Ver portátiles <i class="ri-arrow-right-s-line"></i>
 								</button>
@@ -43,8 +50,10 @@ const HomePicks = () => {
 						<img className="imageLummi" alt="StudentLaptop" src="/src/assets/StudentLaptop.png" />
 						<div className="content1">
 							<div className="copy">
-								<p className="cardTitle">PC para estudiante</p>
-								<p className="cardDescription">Asequible y duradero para el aprendizaje.</p>
+								<p className={`cardTitle ${darkTheme ? "dark-theme" : ""}`}>PC para estudiante</p>
+								<p className={`cardDescription ${darkTheme ? "dark-theme" : ""}`}>
+									Asequible y duradero para el aprendizaje.
+								</p>
 								<button className="readMore" onClick={goToPCs}>
 									Ver portátiles <i class="ri-arrow-right-s-line"></i>
 								</button>

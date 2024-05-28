@@ -9,12 +9,12 @@ import { ThemeProvider } from "./components/ThemeContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<BrowserRouter>
-		<FavoritesProvider>
-			<CounterProvider>
-				<ThemeProvider>
+		<ThemeProvider>
+			<FavoritesProvider>
+				<CounterProvider>
 					<App />
-				</ThemeProvider>
-			</CounterProvider>
-		</FavoritesProvider>
+				</CounterProvider>
+			</FavoritesProvider>
+		</ThemeProvider>
 	</BrowserRouter>
 );

@@ -23,10 +23,11 @@
 	transition: var(--dark-theme-transition-bg);
 }
 .product-popup-content.dark-theme {
-	background-color: red;
+	background-color: var(--dark-theme-background);
 }
 .product-popup-content img {
 	width: 50%;
+	border-radius: 6px;
 }
 .product-popup-content .ri-close-line {
 	position: absolute;
@@ -40,6 +41,11 @@
 	cursor: pointer;
 	font-size: 28px;
 }
+.product-popup-content.dark-theme .ri-close-line,
+.product-popup-content.dark-theme .cart-container-popup .ri-shopping-bag-4-fill {
+	color: var(--primary-color);
+}
+
 .product-popup-content .description {
 	font-size: 14px;
 }
@@ -52,7 +58,7 @@
 }
 .cart-container-popup .ri-shopping-bag-4-fill {
 	font-size: 30px;
-	color: var(--primary-color);
+	/* color: var(--primary-color); */
 	cursor: pointer;
 }
 .cart-container-popup .ri-shopping-bag-4-fill:hover {

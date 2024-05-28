@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./HomeCards.css";
 import ProductPopup from "../Products/ProductPopup";
 import useProductPopup from "../../components/useProductPopup";
-import { ThemeProvider } from "../../components/ThemeContext";
+import { ThemeContext, ThemeProvider } from "../../components/ThemeContext";
 
 const HomeCards = () => {
 	const { selectedProduct, isPopupVisible, popupRef, openPopup, closePopup } = useProductPopup();
@@ -34,33 +34,27 @@ const HomeCards = () => {
 	];
 
 	return (
-		<ThemeProvider>
-			<div className="home-cards-container">
-				<div className="home-cards">
-					{homeComputers.map((computer, index) => (
-						<div className="preview-card" key={index} onClick={() => openPopup(computer)}>
-							<div className="product-preview" />
-							<p className="price-preview">{computer.price}€</p>
-							<p className="laptop-name">{computer.name}</p>
-							<p className="laptop-type">Portátil</p>
-							<img
-								className="image-preview"
-								alt=""
-								src={`/src/assets/Frame ${computer.name}.png`}
-							/>
-						</div>
-					))}
-					{isPopupVisible && (
-						<ProductPopup
-							computer={selectedProduct}
-							closePopup={closePopup}
-							ref={popupRef}
-							isVisible={isPopupVisible}
-						/>
-					)}
-				</div>
+		<div className="home-cards-container">
+			<div className="home-cards">
+				{homeComputers.map((computer, index) => (
+					<div className="preview-card" key={index} onClick={() => openPopup(computer)}>
+						<div className="product-preview" />
+						<p className="price-preview">{computer.price}€</p>
+						<p className="laptop-name">{computer.name}</p>
+						<p className="laptop-type">Portátil</p>
+						<img className="image-preview" alt="" src={`/src/assets/Frame ${computer.name}.png`} />
+					</div>
+				))}
+				{isPopupVisible && (
+					<ProductPopup
+						computer={selectedProduct}
+						closePopup={closePopup}
+						ref={popupRef}
+						isVisible={isPopupVisible}
+					/>
+				)}
 			</div>
-		</ThemeProvider>
+		</div>
 	);
 };
 

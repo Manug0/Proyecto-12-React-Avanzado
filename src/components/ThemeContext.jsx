@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-const ThemeContext = createContext();
+export const ThemeContext = createContext();
 
 export const useTheme = () => useContext(ThemeContext);
 
@@ -20,7 +20,7 @@ export const ThemeProvider = ({ children }) => {
 
 	const updateThemeClasses = (isDarkTheme) => {
 		const elements = document.querySelectorAll(
-			"body, header, .request-info, h2, h3, h4, h5, p, i, a, label, input, form button, .PcCard, .info, footer, .slider, .rect, .favoritesPage, .home-hero, b, .home-cards-container, .buy-now-button, .home-picks, .popup"
+			"body, header, .request-info, h2, h3, h4, h5, p, i, a, label, input, form button, .PcCard, .info, footer, .slider, .rect, .favoritesPage, .home-hero, b, .home-cards-container, .buy-now-button, .home-picks, .product-popup-content"
 		);
 		elements.forEach((element) => {
 			if (isDarkTheme) {
