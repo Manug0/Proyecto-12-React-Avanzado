@@ -244,10 +244,6 @@
 
 @media (max-width: 400px) {
 	.appleMacbookAir13Silver {
-		/* position: static;
-		height: 100px;
-		width: 100%;
-		min-width: 180px; */
 		display: none;
 	}
 	.copyComponent {

@@ -20,10 +20,9 @@ header.dark-theme {
 }
 header.no-scroll {
 	overflow: hidden;
-	padding-right: 0.5rem;
 }
 header.no-scroll nav {
-	right: 89px;
+	right: 49px;
 }
 
 .logo {
@@ -103,7 +102,7 @@ header.no-scroll .ri-moon-line {
 .ri-moon-line {
 	color: var(--primary-color);
 }
-.ri-close-line {
+nav .ri-close-line {
 	cursor: pointer;
 	display: none;
 }
@@ -140,7 +139,7 @@ header.no-scroll .ri-moon-line {
 	.ri-menu-5-fill {
 		display: block;
 	}
-	.ri-close-line {
+	nav .ri-close-line {
 		display: flex;
 	}
 
@@ -161,5 +160,12 @@ header.no-scroll .ri-moon-line {
 		position: absolute;
 		top: 30px;
 		right: 30px;
+	}
+}
+
+@media (max-width: 500px) {
+	.logo {
+		height: 3rem;
+		left: 20px;
 	}
 }

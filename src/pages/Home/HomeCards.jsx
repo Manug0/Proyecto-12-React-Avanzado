@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./HomeCards.css";
 import ProductPopup from "../Products/ProductPopup";
 import useProductPopup from "../../components/useProductPopup";
-import { ThemeContext, ThemeProvider } from "../../components/ThemeContext";
 
 const HomeCards = () => {
 	const { selectedProduct, isPopupVisible, popupRef, openPopup, closePopup } = useProductPopup();

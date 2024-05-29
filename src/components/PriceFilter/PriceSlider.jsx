@@ -11,7 +11,7 @@ const PriceSlider = () => {
 	};
 
 	return (
-		<div>
+		<div className="price-range-container">
 			{" "}
 			<Slider value={value} onChange={handleChange} min={299} max={1499} withBars />
 			<p className="price-range">

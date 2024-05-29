@@ -83,3 +83,15 @@
 	font-family: "Oswald", sans-serif;
 	margin-bottom: 8px;
 }
+
+@media (max-width: 600px) {
+	.favoritesPage {
+		width: 75%;
+	}
+}
+
+@media (max-width: 300px) {
+	.favoritesPage {
+		width: 100%;
+	}
+}

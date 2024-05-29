@@ -21,3 +21,13 @@
 	background-color: var(--primary-color);
 	font-family: system-ui;
 }
+
+@media (max-width: 600px) {
+	.cart-container {
+		width: 30px;
+		height: 30px;
+	}
+	.ri-shopping-bag-4-fill {
+		font-size: 15px;
+	}
+}

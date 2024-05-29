@@ -1,3 +1,9 @@
+.price-range-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
 .slider {
 	width: 100%;
 	height: 25px;
@@ -45,4 +51,24 @@
 .track-0,
 .track-2 {
 	background: #c5c5c5 !important;
+}
+
+@media (max-width: 900px) {
+	.slider {
+		width: 50%;
+		margin: auto;
+	}
+}
+
+@media (max-width: 500px) {
+	.slider {
+		width: 80%;
+		margin: auto;
+	}
+}
+
+@media (max-width: 300px) {
+	.slider {
+		margin: auto;
+	}
 }

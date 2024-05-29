@@ -6,8 +6,10 @@ import BrandFilter from "../../components/BrandFilter/BrandFilter";
 const PCsFilter = () => {
 	return (
 		<aside className="search-filter">
-			<h2>Filtros de búsqueda</h2>
-			<PriceSlider />
+			<div className="price-filter">
+				<h3>Filtrar por precio</h3>
+				<PriceSlider />
+			</div>
 			<BrandFilter />
 		</aside>
 	);

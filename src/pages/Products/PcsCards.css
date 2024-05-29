@@ -13,7 +13,7 @@
 
 .PcCard img {
 	max-width: 250px;
-	min-width: 250px;
+	width: 100%;
 	height: fit-content;
 	border-radius: 8px;
 	transition: transform 0.5s ease;
@@ -47,4 +47,42 @@
 .reviews p {
 	margin-left: -10px;
 	margin-top: -7px;
+}
+
+@media (max-width: 1254px) {
+	.PcCard {
+		width: 200px;
+	}
+	.PcCard img {
+		min-width: 0;
+	}
+}
+
+@media (max-width: 1100px) {
+	.Pcs {
+		gap: 50px;
+	}
+	.PcCard {
+		width: 150px;
+	}
+}
+
+@media (max-width: 900px) {
+	.filter-cards-section {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 600px) {
+	.PcCard {
+		font-size: 14px;
+		width: 100px;
+	}
+	.cart-container {
+		width: 30px;
+		height: 30px;
+	}
+	.ri-shopping-bag-4-fill {
+		font-size: 15px;
+	}
 }
