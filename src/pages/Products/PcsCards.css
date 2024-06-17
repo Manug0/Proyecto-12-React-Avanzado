@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Quattrocento:wght@400;700&display=swap");
 
 .PcCard {
+	width: 250px;
 	border-radius: 10px;
 	transition: box-shadow 0.5s;
 	transform-style: preserve-3d;
