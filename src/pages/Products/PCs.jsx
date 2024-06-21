@@ -1,10 +1,10 @@
 import React from "react";
 import "./PCs.css";
-import PCsCards from "./PCsCards";
 import PCsFilter from "./PCsFilter";
 import { BrandProvider } from "../../components/BrandFilter/BrandContext";
 import { PriceProvider } from "../../components/PriceFilter/PriceContext";
 import Favorites from "../../pages/Favorites/Favorites";
+import PCsCards from "./PCsCards";
 
 const PCs = ({ cart, setCart, favRef, closeIconRef }) => {
 	window.scrollTo(0, 0);
