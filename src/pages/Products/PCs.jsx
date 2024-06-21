@@ -15,7 +15,7 @@ const PCs = ({ cart, setCart, favRef, closeIconRef }) => {
 				<BrandProvider>
 					<PriceProvider>
 						<PCsFilter />
-						<PCsCards />
+						<PCsCards></PCsCards>
 						<Favorites refs={{ favRef, closeIconRef }} />
 					</PriceProvider>
 				</BrandProvider>
