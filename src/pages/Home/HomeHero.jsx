@@ -34,7 +34,7 @@ const HomeHero = () => {
 						<img
 							className="appleMacbookAir13Silver"
 							alt=""
-							src="/src/assets/Apple MacBook Air 13_ Silver.png"
+							src="/Apple MacBook Air 13_ Silver.png"
 						/>
 					</div>
 				</div>

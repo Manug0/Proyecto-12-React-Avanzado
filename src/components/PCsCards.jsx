@@ -108,7 +108,7 @@ const PCsCards = () => {
 		<div className="Pcs">
 			{filterComputers.map((computer, index) => (
 				<div className="PcCard" key={index} onClick={() => openPopup(computer)}>
-					<img key={index} src={`/src/assets/${computer.name}.webp`} alt={computer.name} />
+					<img key={index} src={`/${computer.name}.webp`} alt={computer.name} />
 					<div className="cart-container">
 						<Cart computer={computer} />
 					</div>

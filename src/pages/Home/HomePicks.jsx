@@ -19,7 +19,7 @@ const HomePicks = () => {
 				</div>
 				<div className="cardsGrid">
 					<div className="cards">
-						<img className="imageLummi" alt="GamingLaptop" src="/src/assets/GamingLaptop.png" />
+						<img className="imageLummi" alt="GamingLaptop" src="/GamingLaptop.png" />
 						<div className="content1">
 							<div className="copy">
 								<p className={`cardTitle ${darkTheme ? "dark-theme" : ""}`}>PC Gaming</p>
@@ -33,7 +33,7 @@ const HomePicks = () => {
 						</div>
 					</div>
 					<div className="cards">
-						<img className="imageLummi" alt="BusinessLaptop" src="/src/assets/BusinessLaptop.png" />
+						<img className="imageLummi" alt="BusinessLaptop" src="/BusinessLaptop.png" />
 						<div className="content1">
 							<div className="copy">
 								<p className={`cardTitle ${darkTheme ? "dark-theme" : ""}`}>Pc para negocios</p>
@@ -47,7 +47,7 @@ const HomePicks = () => {
 						</div>
 					</div>
 					<div className="cards">
-						<img className="imageLummi" alt="StudentLaptop" src="/src/assets/StudentLaptop.png" />
+						<img className="imageLummi" alt="StudentLaptop" src="/StudentLaptop.png" />
 						<div className="content1">
 							<div className="copy">
 								<p className={`cardTitle ${darkTheme ? "dark-theme" : ""}`}>PC para estudiante</p>

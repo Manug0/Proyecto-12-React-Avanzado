@@ -59,11 +59,7 @@ const Header = forwardRef(({ openCart, headerRef }) => {
 	return (
 		<header ref={headerRef}>
 			<div className="header-content">
-				<img
-					className="logo"
-					src={darkTheme ? "/src/assets/logo-dark-theme.png" : "/src/assets/logo.png"}
-					alt="logo"
-				/>
+				<img className="logo" src={darkTheme ? "/logo-dark-theme.png" : "/logo.png"} alt="logo" />
 				<nav ref={navRef} className={openNav ? "open" : ""}>
 					<NavLink
 						className="navlink"

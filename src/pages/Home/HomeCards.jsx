@@ -41,7 +41,7 @@ const HomeCards = () => {
 						<p className="price-preview">{computer.price}€</p>
 						<p className="laptop-name">{computer.name}</p>
 						<p className="laptop-type">Portátil</p>
-						<img className="image-preview" alt="" src={`/src/assets/Frame ${computer.name}.png`} />
+						<img className="image-preview" alt="" src={`/Frame ${computer.name}.png`} />
 					</div>
 				))}
 				{isPopupVisible && (
