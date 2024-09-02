@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./PCsCards.css";
 import Stars from "./Stars/Stars";
 import Cart from "./Cart/Cart";
@@ -6,11 +6,14 @@ import { BrandContext } from "./BrandFilter/BrandContext";
 import { PriceContext } from "./PriceFilter/PriceContext";
 import ProductPopup from "../pages/Products/ProductPopup";
 import useProductPopup from "./useProductPopup";
+import NoFilteredComputer from "./NoFilteredComputer/NoFilteredComputer";
 
 const PCsCards = () => {
 	const [checked] = useContext(BrandContext);
 	const [value] = useContext(PriceContext);
 	const { selectedProduct, isPopupVisible, popupRef, openPopup, closePopup } = useProductPopup();
+	const [noFiltered, setNoFiltered] = useState(false);
+	const [suggestedComputers, setSuggestedComputers] = useState([]);
 
 	const computers = [
 		{
@@ -86,6 +89,11 @@ const PCsCards = () => {
 		},
 	];
 
+	const getRandomComputers = (computers, count = 3) => {
+		const shuffled = [...computers].sort(() => 0.5 - Math.random());
+		return shuffled.slice(0, count);
+	};
+
 	const filterPrice = computers.filter((computer) => {
 		return computer.price >= value[0] && computer.price <= value[1];
 	});
@@ -103,6 +111,19 @@ const PCsCards = () => {
 
 		return false;
 	});
+
+	useEffect(() => {
+		if (filterComputers.length === 0 && !noFiltered) {
+			setNoFiltered(true);
+			if (suggestedComputers.length === 0) {
+				const randomSuggestions = getRandomComputers(computers);
+				setSuggestedComputers(randomSuggestions);
+			}
+		} else if (filterComputers.length > 0 && noFiltered) {
+			setNoFiltered(false);
+			setSuggestedComputers([]);
+		}
+	}, [filterComputers, noFiltered, suggestedComputers, computers]);
 
 	return (
 		<div className="Pcs">
@@ -126,6 +147,9 @@ const PCsCards = () => {
 					</div>
 				</div>
 			))}
+			{noFiltered && (
+				<NoFilteredComputer suggestedComputers={suggestedComputers} openPopup={openPopup} />
+			)}{" "}
 			{isPopupVisible && (
 				<ProductPopup
 					computer={selectedProduct}
