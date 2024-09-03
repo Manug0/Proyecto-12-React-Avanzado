@@ -23,37 +23,25 @@ function App() {
 
 	useEffect(() => {
 		if (cart) {
-			headerRef.current.classList.add("no-scroll");
+			headerRef.current?.classList.add("no-scroll");
 			document.body.classList.add("no-scroll");
 			document.addEventListener("mousedown", handleClickOutsideFav);
-			if (closeIconRef.current) {
-				closeIconRef.current.addEventListener("click", closeCart);
-			}
-			if (favRef.current) {
-				favRef.current.classList.add("visible");
-			}
+			closeIconRef.current?.addEventListener("click", closeCart);
+			favRef.current?.classList.add("visible");
 		} else {
-			headerRef.current.classList.remove("no-scroll");
+			headerRef.current?.classList.remove("no-scroll");
 			document.body.classList.remove("no-scroll");
 			document.removeEventListener("mousedown", handleClickOutsideFav);
-			if (closeIconRef.current) {
-				closeIconRef.current.removeEventListener("click", closeCart);
-			}
-			if (favRef.current) {
-				favRef.current.classList.remove("visible");
-			}
+			closeIconRef.current?.removeEventListener("click", closeCart);
+			favRef.current?.classList.remove("visible");
 		}
 
 		return () => {
-			headerRef.current.classList.remove("no-scroll");
+			headerRef.current?.classList.remove("no-scroll");
 			document.body.classList.remove("no-scroll");
 			document.removeEventListener("mousedown", handleClickOutsideFav);
-			if (closeIconRef.current) {
-				closeIconRef.current.removeEventListener("click", closeCart);
-			}
-			if (favRef.current) {
-				favRef.current.classList.remove("visible");
-			}
+			closeIconRef.current?.removeEventListener("click", closeCart);
+			favRef.current?.classList.remove("visible");
 		};
 	}, [cart]);
 
