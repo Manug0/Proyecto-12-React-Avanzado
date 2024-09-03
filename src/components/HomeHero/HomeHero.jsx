@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./HomeHero.css";
 import { useNavigate } from "react-router-dom";
-import { ThemeContext } from "../../components/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const HomeHero = () => {
 	const navigate = useNavigate();

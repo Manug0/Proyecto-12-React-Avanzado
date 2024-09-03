@@ -4,7 +4,7 @@ import DeleteFav from "../../components/DeleteCart/DeleteFav";
 import ProductCounter from "../../components/Counter/ProductCounter";
 import "./Favorites.css";
 import { useCounter } from "../../components/Counter/CounterProvider";
-import { ThemeContext } from "../../components/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Favorites = forwardRef(({ refs }, ref) => {
 	const { favorites, removeFavorite } = useFavorites();

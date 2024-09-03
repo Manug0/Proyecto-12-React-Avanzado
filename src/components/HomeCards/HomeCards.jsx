@@ -1,7 +1,7 @@
 import React from "react";
 import "./HomeCards.css";
-import ProductPopup from "../Products/ProductPopup";
-import useProductPopup from "../../components/useProductPopup";
+import ProductPopup from "../ProductPopup/ProductPopup";
+import useProductPopup from "../../contexts/useProductPopup";
 
 const HomeCards = () => {
 	const { selectedProduct, isPopupVisible, popupRef, openPopup, closePopup } = useProductPopup();

@@ -1,7 +1,7 @@
 import React from "react";
 import "./PCsFilter.css";
-import PriceSlider from "../../components/PriceFilter/PriceSlider";
-import BrandFilter from "../../components/BrandFilter/BrandFilter";
+import PriceSlider from "../PriceFilter/PriceSlider";
+import BrandFilter from "../BrandFilter/BrandFilter";
 
 const PCsFilter = () => {
 	return (

@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useTheme } from "../ThemeContext";
 import "./Header.css";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const Header = forwardRef(({ openCart, headerRef }) => {
 	const { darkTheme, toggleTheme } = useTheme();

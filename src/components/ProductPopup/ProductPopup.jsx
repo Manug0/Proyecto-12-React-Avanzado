@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect } from "react";
 import "./ProductPopup.css";
 import Cart from "../../components/Cart/Cart";
 import Stars from "../../components/Stars/Stars";
-import { useTheme } from "../../components/ThemeContext";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const ProductPopup = forwardRef(({ computer, closePopup, isVisible }, ref) => {
 	const { darkTheme, updateThemeClasses } = useTheme();
