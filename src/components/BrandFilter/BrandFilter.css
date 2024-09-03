@@ -2,7 +2,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
+	/* margin: 0 auto; */
+	padding-right: 100px;
 	margin-top: 20px;
+	align-items: flex-end;
 }
 
 .brand-checkbox > div {
