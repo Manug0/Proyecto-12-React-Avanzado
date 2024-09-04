@@ -5,16 +5,20 @@ import Stars from "../../components/Stars/Stars";
 import { useTheme } from "../../contexts/ThemeContext";
 
 const ProductPopup = forwardRef(({ computer, closePopup, isVisible }, ref) => {
-	const { darkTheme, updateThemeClasses } = useTheme();
+	const { darkTheme } = useTheme();
 
 	useEffect(() => {
 		if (isVisible) {
 			const popup = document.querySelector(".product-popup-content");
 			if (popup) {
-				updateThemeClasses(darkTheme);
+				if (darkTheme) {
+					popup.classList.add("dark-theme");
+				} else {
+					popup.classList.remove("dark-theme");
+				}
 			}
 		}
-	}, [isVisible, darkTheme, updateThemeClasses]);
+	}, [isVisible, darkTheme]);
 
 	if (!isVisible) return null;
 
