@@ -6,9 +6,9 @@ import { useTheme } from "../../contexts/ThemeContext";
 const Header = forwardRef(({ openCart, headerRef }) => {
 	const { darkTheme, toggleTheme } = useTheme();
 	const [openNav, setOpenNav] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
 	const navRef = useRef(null);
 	const burgerMenuButton = useRef(null);
-	const closeBurgerButton = useRef(null);
 
 	const handleBurgerMenu = () => {
 		setOpenNav(!openNav);
@@ -17,6 +17,17 @@ const Header = forwardRef(({ openCart, headerRef }) => {
 	const handleCloseMenu = () => {
 		setOpenNav(false);
 	};
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 0);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	useEffect(() => {
 		function handleClickOutside(event) {
@@ -36,30 +47,16 @@ const Header = forwardRef(({ openCart, headerRef }) => {
 		};
 	}, [openNav]);
 
-	useEffect(() => {
-		window.addEventListener("scroll", function () {
-			const header = document.querySelector("header");
-			const headerContent = document.querySelector(".header-content");
-			const logo = document.querySelector(".logo");
-			const nav = document.querySelector("nav");
-			if (window.scrollY > 0) {
-				header.classList.add("squeeze");
-				headerContent.classList.add("squeeze");
-				logo.classList.add("squeeze");
-				nav.classList.add("squeeze");
-			} else {
-				header.classList.remove("squeeze");
-				headerContent.classList.remove("squeeze");
-				logo.classList.remove("squeeze");
-				nav.classList.remove("squeeze");
-			}
-		});
-	}, []);
-
 	return (
-		<header ref={headerRef} className={darkTheme ? "dark-theme" : "light-theme"}>
-			<div className="header-content">
-				<img className="logo" src={darkTheme ? "/logo-dark-theme.png" : "/logo.png"} alt="logo" />
+		<header
+			ref={headerRef}
+			className={`${darkTheme ? "dark-theme" : "light-theme"} ${isScrolled ? "squeeze" : ""}`}>
+			<div className={`header-content ${isScrolled ? "squeeze" : ""}`}>
+				<img
+					className={`logo ${isScrolled ? "squeeze" : ""}`}
+					src={darkTheme ? "/logo-dark-theme.png" : "/logo.png"}
+					alt="logo"
+				/>
 				<nav ref={navRef} className={openNav ? "open" : ""}>
 					<NavLink
 						className="navlink"
@@ -78,14 +75,14 @@ const Header = forwardRef(({ openCart, headerRef }) => {
 							openCart();
 							handleCloseMenu();
 						}}></i>
-					<i ref={closeBurgerButton} onClick={handleCloseMenu} className="ri-close-line"></i>
+					<i onClick={handleCloseMenu} className="ri-close-line"></i>
 					<i
 						onClick={toggleTheme}
 						className={darkTheme ? "ri-moon-line" : "ri-sun-line"}
 						id="change-theme-button"></i>
 				</nav>
 			</div>
-			<i ref={burgerMenuButton} onClick={handleBurgerMenu} class="ri-menu-5-fill"></i>
+			<i ref={burgerMenuButton} onClick={handleBurgerMenu} className="ri-menu-5-fill"></i>
 		</header>
 	);
 });
