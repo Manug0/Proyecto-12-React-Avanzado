@@ -2,13 +2,17 @@ import React, { forwardRef, useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { useTheme } from "../../contexts/ThemeContext";
+import { useFavorites } from "../../pages/Favorites/FavoritesProvider";
 
 const Header = forwardRef(({ openCart, headerRef }) => {
+	const { favorites } = useFavorites();
 	const { darkTheme, toggleTheme } = useTheme();
 	const [openNav, setOpenNav] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const navRef = useRef(null);
 	const burgerMenuButton = useRef(null);
+
+	const cartCount = favorites.length;
 
 	const handleBurgerMenu = () => {
 		setOpenNav(!openNav);
@@ -69,12 +73,25 @@ const Header = forwardRef(({ openCart, headerRef }) => {
 					<NavLink className="navlink" activeClassName="active" to="/pcs" onClick={handleCloseMenu}>
 						Portátiles
 					</NavLink>
-					<i
-						className="ri-shopping-cart-line"
-						onClick={() => {
-							openCart();
-							handleCloseMenu();
-						}}></i>
+					<div className="shopping-cart-container">
+						<i
+							className="ri-shopping-cart-line"
+							onClick={() => {
+								openCart();
+								handleCloseMenu();
+							}}></i>
+						{cartCount > 0 && (
+							<span
+								className="counter"
+								onClick={() => {
+									openCart();
+									handleCloseMenu();
+								}}>
+								{cartCount}
+							</span>
+						)}
+					</div>
+
 					<i onClick={handleCloseMenu} className="ri-close-line"></i>
 					<i
 						onClick={toggleTheme}

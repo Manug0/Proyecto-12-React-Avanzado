@@ -80,11 +80,32 @@ nav.squeeze {
 	color: rgb(162, 255, 255);
 }
 
+.shopping-cart-container {
+	position: relative;
+}
 .ri-shopping-cart-line {
 	margin-right: 40px;
 }
 .ri-shopping-cart-line:hover {
 	cursor: pointer;
+}
+
+.counter {
+	position: absolute;
+	cursor: pointer;
+	color: var(--color-primary);
+	background-color: red;
+	padding: 1px 6px;
+	border-radius: 50%;
+	font-size: 10px;
+	top: -5%;
+	right: 45%;
+	width: var(--size-md);
+	height: var(--size-md);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
 }
 
 .ri-sun-line,
