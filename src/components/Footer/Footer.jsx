@@ -1,15 +1,17 @@
 import React from "react";
 import "./Footer.css";
+import { useTheme } from "../../contexts/ThemeContext";
 import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+	const { darkTheme } = useTheme();
 	const navigate = useNavigate();
 
 	const goToForm = () => {
 		navigate("/infoForm");
 	};
 	return (
-		<footer>
+		<footer className={darkTheme ? "dark-theme" : "light-theme"}>
 			<div className="footer-main-content">
 				<div className="support">
 					<h5>Soporte</h5>

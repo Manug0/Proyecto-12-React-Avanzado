@@ -1,7 +1,7 @@
 import React from "react";
 import { useFavorites } from "../../pages/Favorites/FavoritesProvider";
-import { useCounter } from "../Counter/CounterProvider";
 import "./Cart.css";
+import { useCounter } from "../../contexts/CounterProvider";
 
 const Cart = ({ computer }) => {
 	const { favorites, addFavorite } = useFavorites();

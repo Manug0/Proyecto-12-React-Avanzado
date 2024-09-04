@@ -3,8 +3,8 @@ import { useFavorites } from "./FavoritesProvider";
 import DeleteFav from "../../components/DeleteCart/DeleteFav";
 import ProductCounter from "../../components/Counter/ProductCounter";
 import "./Favorites.css";
-import { useCounter } from "../../components/Counter/CounterProvider";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { useCounter } from "../../contexts/CounterProvider";
 
 const Favorites = forwardRef(({ refs }, ref) => {
 	const { favorites, removeFavorite } = useFavorites();

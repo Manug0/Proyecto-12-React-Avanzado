@@ -1,8 +1,8 @@
 import React from "react";
 import "./PCs.css";
 import PCsFilter from "../../components/PCsFilters/PCsFilter";
-import { BrandProvider } from "../../components/BrandFilter/BrandContext";
-import { PriceProvider } from "../../components/PriceFilter/PriceContext";
+import { BrandProvider } from "../../contexts/BrandContext";
+import { PriceProvider } from "../../contexts/PriceContext";
 import Favorites from "../../pages/Favorites/Favorites";
 import PCsCards from "../../components/PCsCards/PCsCards";
 

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./BrandFilter.css";
-import { BrandContext } from "./BrandContext";
+import { BrandContext } from "../../contexts/BrandContext";
 
 const BrandFilter = () => {
 	const [checked, setChecked] = useContext(BrandContext);

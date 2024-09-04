@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./PriceSlider.css";
 import Slider from "react-slider";
-import { PriceContext } from "./PriceContext";
+import { PriceContext } from "../../contexts/PriceContext";
 
 const PriceSlider = () => {
 	const [value, setValue] = useContext(PriceContext);

@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { useCounter } from "./CounterProvider";
+import { useCounter } from "../../contexts/CounterProvider";
 
 const ProductCounter = forwardRef(({ productName }, ref) => {
 	const { getCounter } = useCounter();

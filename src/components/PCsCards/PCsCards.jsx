@@ -1,13 +1,13 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./PCsCards.css";
 import Cart from "../Cart/Cart";
-import { BrandContext } from "../BrandFilter/BrandContext";
-import { PriceContext } from "../PriceFilter/PriceContext";
+import { PriceContext } from "../../contexts/PriceContext";
 import ProductPopup from "../ProductPopup/ProductPopup";
 import NoFilteredComputer from "../NoFilteredComputer/NoFilteredComputer";
 import Stars from "../Stars/Stars";
 import useProductPopup from "../../contexts/useProductPopup";
 import computers from "../../utils/computers";
+import { BrandContext } from "../../contexts/BrandContext";
 
 const PCsCards = () => {
 	const [checked] = useContext(BrandContext);
