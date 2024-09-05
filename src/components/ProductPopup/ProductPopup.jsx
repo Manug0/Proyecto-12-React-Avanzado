@@ -26,7 +26,10 @@ const ProductPopup = forwardRef(({ computer, closePopup, isVisible }, ref) => {
 		<div className="product-popup">
 			<div className="product-popup-content" ref={ref}>
 				<i className="ri-close-line" onClick={closePopup}></i>
-				<img src={`/${computer.name}.webp`} alt={computer.name} />
+				<img
+					src={computer.hasPng ? `/${computer.name}.png` : `/${computer.name}.webp`}
+					alt={computer.name}
+				/>
 				<div className="cart-container-popup">
 					<Cart computer={computer} />
 				</div>

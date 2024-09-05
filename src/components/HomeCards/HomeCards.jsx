@@ -14,6 +14,7 @@ const HomeCards = () => {
 			brand: "Apple",
 			description:
 				"El MacBook Air es el compañero perfecto para trabajar y divertirte. Además, ahora el portátil más popular del mundo incluye el huracanado chip M3. Con este fichaje, un diseño ultracompacto y hasta 18 horas de autonomía, puede ir contigo donde quieras para ventilarte todo lo que te echen.",
+			hasPng: true,
 		},
 		{
 			name: "Asus TUF Gaming F17",
@@ -21,6 +22,7 @@ const HomeCards = () => {
 			reviews: 11,
 			brand: "Asus",
 			description: "Ármate con un teclado estilo escritorio optimizado para juegos",
+			hasPng: false,
 		},
 		{
 			name: "Asus Chromebook Plus",
@@ -29,6 +31,7 @@ const HomeCards = () => {
 			brand: "Asus",
 			description:
 				"El ASUS Chromebook Plus CX34 es potente, portátil y está preparado para llevar la productividad aún más lejos: ofrece el doble de velocidad, el doble de memoria y el doble de almacenamiento, además de funciones de Google y Adobe potenciadas por IA para darte más de lo que más te gusta.",
+			hasPng: false,
 		},
 	];
 
@@ -41,7 +44,11 @@ const HomeCards = () => {
 						<p className="price-preview">{computer.price}€</p>
 						<p className="laptop-name">{computer.name}</p>
 						<p className="laptop-type">Portátil</p>
-						<img className="image-preview" alt="" src={`/Frame ${computer.name}.png`} />
+						<img
+							className="image-preview"
+							alt=""
+							src={computer.hasPng ? `/${computer.name}.png` : `/${computer.name}.webp`}
+						/>
 					</div>
 				))}
 				{isPopupVisible && (

@@ -65,13 +65,26 @@
 
 .favorite-product {
 	display: flex;
+	gap: 1rem;
 	border-bottom: 1px solid #3a3a3a;
+}
+.favorite-product-name {
+	font-weight: 700;
+}
+.favorite-product-price {
+	color: green;
 }
 .favorite-product img {
 	min-width: 120px;
 	max-width: 120px;
+	max-height: 120px;
 	border-radius: 8px;
 	transition: transform 0.5s ease;
+}
+.favorite-product-counter {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
 }
 
 .favorite-product-info {

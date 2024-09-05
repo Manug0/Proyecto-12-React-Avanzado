@@ -30,15 +30,18 @@ const Favorites = forwardRef(({ refs }, ref) => {
 				{favorites.map((computer) => (
 					<div key={computer.name}>
 						<div className="favorite-product">
-							<img src={`/src/assets/${computer.name}.webp`} alt="computer" />
+							<img
+								src={computer.hasPng ? `/${computer.name}.png` : `/${computer.name}.webp`}
+								alt="computer"
+							/>
 							<div className="favorite-product-info">
-								<p>{computer.name}</p>
-								<p>{computer.price}€</p>
-								<p>
+								<p className="favorite-product-name">{computer.name}</p>
+								<p className="favorite-product-price">{computer.price}€</p>
+								<p className="favorite-product-counter">
 									Uds: <ProductCounter productName={computer.name} />
 								</p>
 								{counter[computer.name] > 1 && (
-									<p>Total: {counter[computer.name] * computer.price}€</p>
+									<p>Total:{counter[computer.name] * computer.price}€</p>
 								)}
 							</div>
 						</div>
